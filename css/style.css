@@ -1,0 +1,225 @@
+/* .bg{
+    background-color: #93abd3;
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+}
+
+.form-container{
+    position: absolute;
+    top: 15vh;
+    background-color: #fff;
+    padding: 1.875rem;
+    border-radius: 0.625rem;
+    box-shadow: 0px 0px 10px 0px #000;
+} */
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+     align-items: center;
+    justify-content: center; 
+    background-color: #93abd3;
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+}
+
+.container{
+     position: absolute;
+    top: 15vh; 
+    width:400px;
+    background: #fff;
+    border-radius: 0.625rem;
+    text-align: center;
+    padding: 50px 35px 10px 35px;
+}
+
+.container header{
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+}
+
+.container .form-outer{
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-outer form{
+    display: flex;
+    width: 400%;
+}
+
+.form-outer form .page{
+    width: 25%;
+}
+
+.form-outer form .page .title{
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.form-outer form .page .field{
+    height: 45px;
+    width: 330px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
+}
+
+.form-outer form .page .field .label{
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+}
+
+.form-outer form .page .field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+form .page .field select{
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+
+}
+
+.form-outer form .page .field button{
+    width: 100%;
+    height: calc(100%+5px);
+    margin-top: -20px;
+    border: none;
+    background: #34626c;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.form-outer form .page .field button:hover{
+    background: #5c6e91;
+}
+
+.form-outer form .page .btns button{
+    margin-top: -20px!important;
+}
+
+form .page .btns button .prev{
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .page .btns button .next{
+    margin-left: 3px;
+}
+
+ .container .progress-bar1{
+    display: flex;
+    margin: 40px 0;
+}
+
+.container .progress-bar1 .step{
+    text-align: center;
+    width: 100%;
+}
+
+.progress-bar1 .step p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.progress-bar1 .step .bullet1{
+    height: 25px;
+    width: 25px;
+    border: 2px solid rgb(62, 10, 248);
+    display: inline-block;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.progress-bar1 .step .bullet1.active{
+    border-color: #d43f8d;
+    background: #5c6e91;
+  }
+
+.progress-bar1 .step .bullet1 span{
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.progress-bar1 .step .bullet1.active span{
+    display: none;
+}
+
+.progress-bar1 .step .bullet1:before, .progress-bar1 .step .bullet1:after{
+  position: absolute;
+  content: '';
+    /* bottom: 150px; 
+  left: 199px;  */
+  top: 23.5vh;
+  /* left: 22vh; */
+  height: 3px;
+  width: 68px;
+  background: #4e06f7;
+}
+
+
+
+.progress-bar1 .step .bullet1.active:after{
+    background: #d43f8d;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+  }
+
+@keyframes animate {
+    100%{
+      transform: scaleX(1);
+    }
+  }
+
+.progress-bar1 .step:last-child .bullet1:before,
+.progress-bar1 .step:last-child .bullet1:after{
+  display: none;
+}
+
+.progress-bar1 .step p.active{
+    color: #d43f8d;
+    transition: 0.2s linear;
+  }
+
+.progress-bar1 .step .check{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+
+}
+
+.progress-bar1 .step .check.active{
+    display: block;
+    color: #fff;
+  }
